@@ -36,9 +36,9 @@ export default function RootLayout({
       width={140}
       height={60}
     />
-    <span className="font-bold text-blue-900 text-lg">
-      ALGI Nexa LLC
-    </span>
+<span className="font-bold text-blue-900 text-2xl tracking-wide">
+  ALGI Nexa LLC
+</span>
   </a>
 
   <div className="space-x-6">
