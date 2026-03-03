@@ -4,7 +4,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
 	{/* Hero Section */}
       <Hero />
-</section>
+
 
       {/* Services Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
