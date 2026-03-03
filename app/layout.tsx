@@ -33,8 +33,8 @@ export default function RootLayout({
     <Image
       src="/logo.png"
       alt="ALGI Nexa LLC Logo"
-      width={50}
-      height={50}
+      width={140}
+      height={60}
     />
     <span className="font-bold text-blue-900 text-lg">
       ALGI Nexa LLC
