@@ -27,11 +27,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-	  <nav className="bg-white shadow-md py-4 px-6 flex justify-between">
+<nav className="bg-white shadow-md py-4 px-6 flex justify-between">
   <a href="/" className="font-bold text-blue-900">ALGI Nexa LLC</a>
   <div className="space-x-6">
     <a href="/" className="hover:text-blue-700">Home</a>
     <a href="/about" className="hover:text-blue-700">About</a>
+    <a href="/contact" className="hover:text-blue-700">Contact</a>
   </div>
 </nav>
         {children}
