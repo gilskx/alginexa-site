@@ -57,15 +57,26 @@ export default function Hero() {
           Scalable Cloud & Enterprise Architecture
         </motion.h1>
 
-        <motion.p
-          className="text-lg max-w-3xl mx-auto mb-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          Building secure, resilient, and future-ready systems
-          aligned with modern business strategy.
-        </motion.p>
+<motion.div
+  className="max-w-3xl mx-auto mb-10 space-y-4 text-lg"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5, duration: 1 }}
+>
+  <p>
+    We design cloud-native, distributed systems that scale reliably
+    under real-world enterprise workloads.
+  </p>
+
+  <p>
+    From architecture modernization to performance optimization,
+    we help organizations reduce complexity and improve operational stability.
+  </p>
+
+  <p className="font-medium">
+    Secure. Resilient. Scalable.
+  </p>
+</motion.div>
 
         <motion.a
           href="/contact"
