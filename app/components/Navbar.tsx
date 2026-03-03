@@ -27,14 +27,14 @@ export default function Navbar() {
           />
         </motion.div>
 
-        <motion.span
-          className="font-extrabold text-blue-900 text-3xl tracking-wide"
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          ALGI Nexa LLC
-        </motion.span>
+       <motion.span
+  className="font-extrabold text-blue-900 text-3xl tracking-wide"
+  initial={{ opacity: 0, x: -300 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 2 }}
+>
+  ALGI Nexa LLC
+</motion.span>
       </motion.a>
 
       <div className="space-x-6">
