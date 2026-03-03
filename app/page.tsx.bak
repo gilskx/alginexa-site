@@ -4,7 +4,39 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
 	{/* Hero Section */}
       <Hero />
+{/* Value Proposition Strip */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
 
+    <div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-3">
+        Cloud Architecture
+      </h3>
+      <p className="text-gray-600">
+        Designing scalable, resilient, and secure cloud-native systems.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-3">
+        Enterprise Modernization
+      </h3>
+      <p className="text-gray-600">
+        Transforming legacy systems into high-performance platforms.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-3">
+        Performance & Resilience
+      </h3>
+      <p className="text-gray-600">
+        Optimizing distributed systems for reliability and scale.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* Services Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
