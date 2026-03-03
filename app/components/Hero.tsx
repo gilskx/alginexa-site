@@ -46,10 +46,10 @@ export default function Hero() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto backdrop-blur-sm bg-white/5 p-8 rounded-2xl shadow-xl">
+      <div className="relative z-10 max-w-4xl mx-auto backdrop-blur-sm bg-white/5 p-6 md:p-8 rounded-2xl shadow-xl">
 
   <motion.h1
-    className="text-5xl md:text-6xl font-bold mb-8 leading-tight"
+    className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
@@ -59,7 +59,7 @@ export default function Hero() {
   </motion.h1>
 
   <motion.div
-    className="space-y-5 text-lg md:text-xl text-gray-100 mb-10"
+    className="space-y-4 text-base md:text-lg text-gray-100 mb-8"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 0.5, duration: 1 }}

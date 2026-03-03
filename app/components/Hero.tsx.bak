@@ -46,49 +46,51 @@ export default function Hero() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-4xl mx-auto backdrop-blur-sm bg-white/5 p-6 md:p-8 rounded-2xl shadow-xl">
 
-        <motion.h1
-          className="text-5xl md:text-6xl font-bold mb-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Scalable Cloud & Enterprise Architecture
-        </motion.h1>
+  <motion.h1
+    className="text-5xl md:text-6xl font-bold mb-8 leading-tight"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+  >
+    Scalable Cloud &{" "}
+    <span className="text-blue-300">Enterprise Architecture</span>
+  </motion.h1>
 
-<motion.div
-  className="max-w-3xl mx-auto mb-10 space-y-4 text-lg"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.5, duration: 1 }}
->
-  <p>
-    We design cloud-native, distributed systems that scale reliably
-    under real-world enterprise workloads.
-  </p>
+  <motion.div
+    className="space-y-5 text-lg md:text-xl text-gray-100 mb-10"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.5, duration: 1 }}
+  >
+    <p>
+      We design <span className="font-semibold text-white">cloud-native</span>{" "}
+      distributed systems that scale reliably under real-world enterprise workloads.
+    </p>
 
-  <p>
-    From architecture modernization to performance optimization,
-    we help organizations reduce complexity and improve operational stability.
-  </p>
+    <p>
+      From <span className="font-semibold text-white">architecture modernization</span>{" "}
+      to performance optimization, we help organizations reduce complexity
+      and improve operational stability.
+    </p>
 
-  <p className="font-medium">
-    Secure. Resilient. Scalable.
-  </p>
-</motion.div>
+    <p className="text-blue-200 font-medium tracking-wide">
+      Secure • Resilient • Scalable
+    </p>
+  </motion.div>
 
-        <motion.a
-          href="/contact"
-          className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          Start a Conversation
-        </motion.a>
+  <motion.a
+    href="/contact"
+    className="inline-block bg-gradient-to-r from-blue-400 to-purple-500 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 1, duration: 0.5 }}
+  >
+    Start a Conversation
+  </motion.a>
 
-      </div>
+</div>
 
     </section>
   );
