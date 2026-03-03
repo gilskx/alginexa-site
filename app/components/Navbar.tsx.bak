@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -28,14 +27,13 @@ export default function Navbar() {
         </motion.div>
 
         <motion.span
-          className="font-extrabold text-blue-900 text-3xl tracking-wide"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          ALGI Nexa LLC
-        </motion.span>
-      </motion.a>
+  className="font-extrabold text-blue-900 text-3xl tracking-wide"
+  initial={{ opacity: 0, x: -100 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.5 }}
+>
+  ALGI Nexa LLC
+</motion.span>
 
       <div className="space-x-6">
         <a href="/" className="hover:text-blue-700">Home</a>
