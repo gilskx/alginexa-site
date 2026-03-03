@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-<nav className="bg-white shadow-md py-4 px-6 flex justify-between">
-  <a href="/" className="font-bold text-blue-900">ALGI Nexa LLC</a>
+<nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+  <a href="/" className="flex items-center space-x-3">
+    <Image
+      src="/logo.png"
+      alt="ALGI Nexa LLC Logo"
+      width={50}
+      height={50}
+    />
+    <span className="font-bold text-blue-900 text-lg">
+      ALGI Nexa LLC
+    </span>
+  </a>
+
   <div className="space-x-6">
     <a href="/" className="hover:text-blue-700">Home</a>
     <a href="/about" className="hover:text-blue-700">About</a>
