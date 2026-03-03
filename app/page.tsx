@@ -3,22 +3,42 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-28 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          Scalable Cloud & Enterprise Architecture Solutions
-        </h1>
-        <p className="text-lg max-w-3xl mx-auto mb-8">
-          ALGI Nexa LLC provides IT consulting, cloud modernization,
-          and enterprise-grade architecture solutions to help businesses
-          scale securely and innovate confidently.
-        </p>
-        <a
-          href="mailto:info@alginexa.com"
-          className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200"
-        >
-          Contact Us
-        </a>
-      </section>
+     <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-28 px-6 text-center overflow-hidden">
+
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-10">
+    <svg
+      className="w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern id="pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="2" fill="white" />
+          <circle cx="40" cy="40" r="2" fill="white" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#pattern)" />
+    </svg>
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      Scalable Cloud & Enterprise Architecture Solutions
+    </h1>
+    <p className="text-lg max-w-3xl mx-auto mb-8">
+      ALGI Nexa LLC provides IT consulting, cloud modernization,
+      and enterprise-grade architecture solutions.
+    </p>
+    <a
+      href="/contact"
+      className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200"
+    >
+      Contact Us
+    </a>
+  </div>
+
+</section>
 
       {/* Services Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
