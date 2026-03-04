@@ -13,10 +13,35 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    alert("Thank you! We will contact you soon.");
-  };
+const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState(false);
+
+const handleSubmit = async (e: any) => {
+  e.preventDefault();
+  setLoading(true);
+  setSuccess(false);
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      setSuccess(true);
+      setForm({ name: "", email: "", message: "" });
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("Error sending message.");
+  }
+
+  setLoading(false);
+};
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -67,12 +92,19 @@ export default function Contact() {
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
-          >
-            Send Message
-          </button>
+<button
+  type="submit"
+  disabled={loading}
+  className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full"
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
+
+{success && (
+  <p className="text-green-600 text-sm text-center">
+    Message sent successfully! We will contact you soon.
+  </p>
+)}
 
         </form>
       </section>
